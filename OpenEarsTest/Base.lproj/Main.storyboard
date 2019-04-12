@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenEarsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMx-Fl-R9F">
+                                <rect key="frame" x="137.5" y="215" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="PgO-an-EF6"/>
+                                    <constraint firstAttribute="height" constant="100" id="iKa-uT-jaA"/>
+                                </constraints>
+                                <state key="normal" image="Record Button">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kVL-ZH-8mU"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9L-ih-ShX">
+                                <rect key="frame" x="34" y="105" width="307" height="54"/>
+                                <color key="backgroundColor" red="0.42762627320000002" green="0.59732912140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="RFa-tU-pLF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scg-v7-bot">
+                                <rect key="frame" x="34" y="45" width="307" height="52"/>
+                                <color key="backgroundColor" red="0.72306394669999996" green="1" blue="0.83265467380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="SDU-hL-orQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XMx-Fl-R9F" firstAttribute="top" secondItem="B9L-ih-ShX" secondAttribute="bottom" constant="56" id="0Kk-EA-aEw"/>
+                            <constraint firstItem="B9L-ih-ShX" firstAttribute="top" secondItem="scg-v7-bot" secondAttribute="bottom" constant="8" id="0dk-lG-J8N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="scg-v7-bot" secondAttribute="trailing" constant="34" id="O0M-O4-fIu"/>
+                            <constraint firstItem="scg-v7-bot" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="V6Q-hq-7il"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B9L-ih-ShX" secondAttribute="trailing" constant="34" id="WqP-QH-jHp"/>
+                            <constraint firstItem="XMx-Fl-R9F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YCm-lU-EA3"/>
+                            <constraint firstItem="scg-v7-bot" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="pur-QP-YGo"/>
+                            <constraint firstItem="B9L-ih-ShX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="zxw-Cw-Twd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="heardTextView" destination="B9L-ih-ShX" id="wb3-Bj-ToA"/>
+                        <outlet property="recordButton" destination="XMx-Fl-R9F" id="1Dg-Q8-Jsl"/>
+                        <outlet property="statusTextView" destination="scg-v7-bot" id="aI8-Zt-3bt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Record Button" width="47.058822631835938" height="47.058822631835938"/>
+    </resources>
+</document>
